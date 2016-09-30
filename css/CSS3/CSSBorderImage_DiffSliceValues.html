@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#borderimg1 {
+	border: 10px solid transparent;
+	padding: 15px;
+	-webkit-border-image: url(border.png) 50 round; /* Safari 3.1-5 */
+	-o-border-image: url(border.png) 50 round; /* Opera 11-12.1 */
+	border-image: url(border.png) 50 round;
+}
+#borderimg2 {
+	border: 10px solid transparent;
+	padding: 15px;
+	-webkit-border-image: url(border.png) 20% round; /* Safari 3.1-5 */
+	-o-border-image: url(border.png) 20% round; /* Opera 11-12.1 */
+	border-image: url(border.png) 20% round;
+}
+#borderimg3 {
+	border: 10px solid transparent;
+	padding: 15px;
+	-webkit-border-image: url(border.png) 30% round; /* Safari 3.1-5 */
+	-o-border-image: url(border.png) 30% round; /* Opera 11-12.1 */
+	border-image: url(border.png) 30% round;
+}
+</style>
+</head>
+<body>
+
+<p id="borderimg1">>border-image: url(border.png) 50 round;</p>
+<p id="borderimg2">border-image: url(border.png) 20% round;</p>
+<p id="borderimg3">border-image: url(border.png) 30% round;</p>
+
+<p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+
+</body>
+</html>

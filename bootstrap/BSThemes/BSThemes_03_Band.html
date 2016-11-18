@@ -77,6 +77,16 @@
   	background-color: #fff;
   	color: #000;
   }
+  /* Add a dark gray background color to the modal header and center text */
+  .modal-header, h4, .close {
+  	background-color: #333;
+  	color: #fff !important;
+  	text-align: center;
+  	font-size: 30px;
+  }
+  .modal-header, .modal-body {
+  	padding: 40px 50px;
+  }
   </style>
 </head>
 <body>
@@ -186,7 +196,7 @@
           <img src="paris.jpg" alt="Paris" width="400" height="300">
           <p><strong>Paris</strong></p>
           <p>Fri. 27 November 2015</p>
-          <button class="btn">Buy Tickets</button>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> <!-- Used to open the Modal -->
         </div>
       </div>
       <div class="col-sm-4">
@@ -194,7 +204,7 @@
           <img src="newyork.jpg" alt="New York" width="400" height="300">
           <p><strong>New York</strong></p>
           <p>Sat. 28 November 2015</p>
-          <button class="btn">Buy Tickets</button>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
         </div>
       </div>
       <div class="col-sm-4">
@@ -202,7 +212,41 @@
           <img src="sanfran.jpg" alt="San Fransisco" width="400" height="300">
           <p><strong>San Fransisco</strong></p>
           <p>Sun. 29 November 2015</p>
-          <button class="btn">Buy Tickets</button>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-block">Pay<span class="glyphicon glyphicon-ok"></span>
+            </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
         </div>
       </div>
     </div>

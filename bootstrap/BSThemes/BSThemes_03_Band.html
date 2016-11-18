@@ -90,6 +90,12 @@
   .nav-tabs li a {
   	color: #777;
   }
+  #googleMap {
+  	width: 100%; /* Span the entire width of the screen */
+  	height: 400px; /* Set the height to 400 pixels */
+  	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%); /* Change the color of the map to black and white */
+  }
   </style>
 </head>
 <body>
@@ -309,6 +315,34 @@
     </div>
   </div>
 </div>
+
+<div id="googleMap"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>js
+<script>
+  var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+  function initialize() {
+  	var mapProp = {
+  		center: myCenter,
+  		zoom: 12,
+  		scrollwheel: false,
+  		draggable: false,
+  		mapTypeId: google.maps.MapTypeId.ROADMAP
+  	};
+
+  	var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+  	var marker = new google.maps.Marker({
+  		position: myCenter,
+  	});
+
+  	marker.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 </body>
 </html>

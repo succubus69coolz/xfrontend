@@ -114,7 +114,7 @@
   	color: #fff !important;
   }
   /* The active link */
-  .navbar nav li.active a {
+  .navbar-nav li.active a {
   	color: #fff !important;
   	background-color: #29292c !important;
   }
@@ -137,7 +137,7 @@
   }
   </style>
 </head>
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -215,7 +215,8 @@
   </a>
 </div>
 
-<div class="container text-center">
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
   <h3>THE BAND</h3>
   <p>We love music!</p>
   <p>We have created a fictional band website. Lorem ipsum..</p>
@@ -258,7 +259,7 @@
 </div>
 
 <!-- Container (TOUR Section) -->
-<div class="bg-1">
+<div id="tour" class="bg-1">
   <div class="container">
     <h3 class="text-center">TOUR DATES</h3>
     <p class="text-center">Lorem ipsum we'll play you some music.<br /> Remember to book your tickets!</p>
@@ -332,7 +333,7 @@
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="container">
+<div id="contact" class="container">
   <h3 class="text-center">Contact</h3>
   <p class="text-center"><em>We love our fans!</em></p>
 
